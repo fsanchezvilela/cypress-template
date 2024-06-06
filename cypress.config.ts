@@ -6,5 +6,13 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-  projectId: 'z9d1jw'
+
+  projectId: "z9d1jw",
+
+  component: {
+    devServer: {
+      framework: "react",
+      bundler: "vite",
+    },
+  },
 });

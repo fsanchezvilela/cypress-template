@@ -15,7 +15,7 @@
     "e2e:local:open": "node_modules/.bin/cypress open",
     "e2e:local:run": "node_modules/.bin/cypress run",
     "e2e:local:run:electron": "node_modules/.bin/cypress run --browser electron",
-    "e2e:local:run:record": "node_modules/.bin/cypress run --headless --browser electron --record --key 0211c236-9f1a-405a-9e96-f966bf4b9223"
+    "e2e:record:run": "node_modules/.bin/cypress run --headless --browser electron --record --key 0211c236-9f1a-405a-9e96-f966bf4b9223"
   },
   "dependencies": {
     "react": "^18.2.0",
