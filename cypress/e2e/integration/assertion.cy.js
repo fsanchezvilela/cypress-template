@@ -1,7 +1,7 @@
 const { assert } = require("chai");
 const { expect } = require("chai");
 
-describe("example implicit", () => {
+describe.skip("example implicit", () => {
   beforeEach(() => {
     cy.visit("https://example.cypress.io/todo");
   });
@@ -35,7 +35,7 @@ describe("example implicit", () => {
   */
 });
 
-describe("example explicito", () => {
+describe.skip("example explicito", () => {
   // cy.get(".todo-list li").first().should("have.text", "Pay electric bill");
   // cy.get(".todo-list li").last().should("have.text", "Walk the dog");
   

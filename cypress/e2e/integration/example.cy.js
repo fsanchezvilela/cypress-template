@@ -8,6 +8,8 @@ describe("example", () => {
   });
 
   it("displays two todo items by default", () => {
+    // tag: example
+    // codigo de prueba
     // Usamos el comando `cy.get()` para obtener todos los elementos que coinciden con el selector.
     // Luego usamos `should` para afirmar que hay dos elementos coincidentes,
     // cuáles son los dos elementos predeterminados.
