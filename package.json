@@ -1,17 +1,21 @@
 {
   "name": "cypress-testing-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Cypress Template Configuration",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "cy:prepare": "node_modules/.bin/cypress install",
-    "e2e:local:open": "node_modules/.bin/cypress open"
+    "e2e:local:open": "node_modules/.bin/cypress open",
+    "e2e:local:run": "node_modules/.bin/cypress run",
+    "e2e:local:run:electron": "node_modules/.bin/cypress run --browser electron",
+    "e2e:local:run:record": "node_modules/.bin/cypress run --headless --browser electron --record --key 0211c236-9f1a-405a-9e96-f966bf4b9223"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -27,6 +31,7 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "cypress": "^13.11.0",
+    "cypress-xpath": "^2.0.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
