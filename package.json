@@ -31,6 +31,9 @@
   "author": "Fernando Sanchez",
   "license": "MIT",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.6",
+    "@bahmutov/cypress-code-coverage": "^2.6.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1",
     "@types/node": "^20.14.2",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -40,6 +43,8 @@
     "autoprefixer": "^10.4.19",
     "cypress": "^13.11.0",
     "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-on-fix": "^1.0.3",
+    "cypress-watch-and-reload": "^1.10.14",
     "cypress-xpath": "^2.0.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
