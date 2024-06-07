@@ -12,9 +12,9 @@ describe("capture screenshot", () => {
     // Todo Example
     cy.screenshot("body");
     cy.wait(5000);
-    cy.get(".todo-list").screenshot("initial-todo-list");
+    cy.get(".todo-list").screenshot("todo-before");
     todoPage.setTodo("nuevo todo");
     todoPage.validateLastValueOfList(3, "nuevo todo");
-    cy.get(".todo-list").screenshot("todo-list-modificado");
+    cy.get(".todo-list").screenshot("todo-after");
   });
 });

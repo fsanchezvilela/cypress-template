@@ -1,12 +1,15 @@
+/// <reference types="cypress" />
+/// <reference types="cypress-xpath" />
 // Hooks and build it task
 // - before (ejecuta antes de todos los test)
 // - after (ejecuta despues de todos los test)
 // - beforeEach (ejecuta antes de cada caso)
 // - afterEach (ejecuta despues de cada caso)
 
-describe.skip('Hooks & tags and filters', ()=>{
+describe.skip('Hooks & tags and filters', ()=> {
     // - before (ejecuta antes de todos los test)
     before(()=>{
+        cy.visit("https://www.google.com")
         cy.log("******* Launch app *******")
     })
     // - after (ejecuta despues de todos los test)
@@ -29,9 +32,9 @@ describe.skip('Hooks & tags and filters', ()=>{
         // -> ejecuta el afterEach 
     })
     // Podemos Saltar una prueba usando el .skip (esto no ejecutara los hooks "each")
-    it.skip(('advance search', ()=>{
+    it.skip('advance search', ()=>{
         cy.log("***** advance search *****")
-    }))
+    })
     // Podemos solo ejecutar un bloque de prueba con el .only 
     // haciendo esto ignoramos los hooks
     it.only('listing products', ()=>{
