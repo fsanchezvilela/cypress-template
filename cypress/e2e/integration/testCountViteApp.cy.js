@@ -8,14 +8,14 @@ describe("test count vite app", () => {
 
   it("click count button state", () => {
     // take inital snapshot
-    cy.screenshot("before-click-state");
-    
+    cy.screenshot("before");
+
     cy.get('[data-cy="counter-button"]')
       .should("have.text", "count is 0")
       .click();
     cy.get('[data-cy="counter-button"]').should("have.text", "count is 1");
     // take final snapshot
     cy.wait(1000);
-    cy.screenshot("after-click-state");
+    cy.screenshot("after");
   });
 });

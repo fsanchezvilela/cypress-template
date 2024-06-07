@@ -11,8 +11,30 @@ jobs:
       matrix:
         containers: [1, 2] # Uses 2 parallel instances
     steps:
+      - name: Delete existing reports
+        run: rm -rf cypress/reports/html/*.json
+      - name: Clear cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            .cache
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Delete existing reports
+        run: rm -rf cypress/reports/html/*.json
+      - name: Clear cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            .cache
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Cypress run
         # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
         uses: cypress-io/github-action@v6
