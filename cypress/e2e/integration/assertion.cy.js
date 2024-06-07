@@ -1,6 +1,3 @@
-const { assert } = require("chai");
-const { expect } = require("chai");
-
 describe.skip("example implicit", () => {
   beforeEach(() => {
     cy.visit("https://example.cypress.io/todo");
