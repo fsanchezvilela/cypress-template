@@ -11,11 +11,11 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "cy:prepare": "node_modules/.bin/cypress install",
-    "e2e:local:open": "node_modules/.bin/cypress open",
-    "e2e:local:run": "node_modules/.bin/cypress run",
-    "e2e:local:run:electron": "node_modules/.bin/cypress run --browser electron",
-    "e2e:record:run": "node_modules/.bin/cypress run --headless --browser electron --record --key 0211c236-9f1a-405a-9e96-f966bf4b9223"
+    "cy:prepare": "npx cypress install",
+    "e2e:local:open": "npx cypress open",
+    "e2e:local:run": "npx cypress run",
+    "e2e:local:run:electron": "npx cypress run --browser electron",
+    "e2e:record:run": "npx cypress run --headless --browser electron --record --key 0211c236-9f1a-405a-9e96-f966bf4b9223"
   },
   "dependencies": {
     "react": "^18.2.0",
