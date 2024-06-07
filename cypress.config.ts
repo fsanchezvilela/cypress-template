@@ -1,5 +1,4 @@
 import { defineConfig } from "cypress";
-import { beforeRunHook, afterRunHook } from "cypress-mochawesome-reporter/lib";
 import cypressMochaAwesomeReporterPlugin from "cypress-mochawesome-reporter/plugin";
 import cypressWatchAndReloadPlugins from "cypress-watch-and-reload/plugins";
 import cypressCodeCoveragePlugin from "@bahmutov/cypress-code-coverage/plugin";
@@ -39,17 +38,7 @@ export default defineConfig({
         createBundler({
           plugins: [createEsbuildPlugin(config)],
         })
-      );
-      // If you are override before:run or after:run hooks, use this:
-      on("before:run", async (details) => {
-        console.log("override before:run");
-        await beforeRunHook(details);
-      });
-
-      on("after:run", async () => {
-        console.log("override after:run");
-        await afterRunHook();
-      });
+      )
     },
   },
   projectId: "z9d1jw",
